@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --bg: #110202;
+  --bg-elev: #1a0505;
+  --card: #220808;
+  --muted: #d4a3a3;
+  --text: #ffffff;
+  --accent: #ff4500;
+  --accent-2: #ff764e;
+  --header: rgba(17,2,2,0.65);
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --color-bg: var(--bg);
+  --color-bg-elev: var(--bg-elev);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-header: var(--header);
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-text m-0 font-sans flex flex-col;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: radial-gradient(1200px 600px at 70% 20%, #1c243d 0%, transparent 60%),
+                radial-gradient(1200px 700px at 20% 90%, #1a2137 0%, transparent 55%),
+                linear-gradient(180deg, #0d1222 0%, #0b0f19 100%);
+  }
+  .card-gradient {
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+  }
+  .glass-header {
+    background: var(--header);
+    backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,.04);
+  }
+  .section-container {
+    @apply w-[min(1150px,92%)] mx-auto;
+  }
+  .section-padding {
+    @apply py-[120px] pb-[80px];
+  }
+  .section-separator {
+    @apply w-[82%] max-w-[900px] h-[1px] mx-auto bg-[rgba(255,255,255,.1)];
+  }
+}

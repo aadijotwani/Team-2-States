@@ -44,12 +44,12 @@ Include the following sections:
 
 Keep it professional, highly readable, and formatted beautifully with bullet points and bold text where appropriate.`;
 
-    const response = await ai.models.generateContent({
-        model: 'gemini-2.0-flash',
-        contents: prompt,
+    const interaction = await ai.interactions.create({
+        model: 'gemini-3.7-flash',
+        input: prompt,
     });
     
-    return response.text;
+    return interaction.output_text;
   } catch (error) {
     console.error("AI Analysis failed:", error);
     return `### ❌ Analysis Failed\nThere was an error communicating with the Gemini API. Please check your API key and network connection.\n\nError details: ${error.message}`;

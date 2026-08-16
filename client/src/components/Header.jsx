@@ -7,10 +7,13 @@ export default function Header() {
   return (
     <div className="fixed top-6 inset-x-0 z-[1000] flex justify-center w-full px-4 pointer-events-none">
       <header className="pointer-events-auto bg-[#0a0202]/60 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between w-full max-w-[800px] shadow-[0_15px_40px_rgba(0,0,0,0.5)]">
-        <a href="#hero" className="flex items-center gap-2 font-extrabold tracking-wide text-white text-xl cursor-pointer no-underline group">
-          <Flame className="text-accent transition-transform duration-300 group-hover:scale-110" size={24} />
-          Wildfire
-        </a>
+        <div className="flex items-center gap-2 text-white font-bold text-xl tracking-tight">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#ff4500]">
+            <path d="M12 2c0 0-5 6.5-5 11a5 5 0 0 0 10 0c0-4.5-5-11-5-11Z" />
+            <path d="M12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+          </svg>
+          Firewall
+        </div>
         <nav className="hidden md:flex items-center gap-2">
           <a href="#map" className={linkClass}>Map</a>
           <a href="#why" className={linkClass}>Why</a>

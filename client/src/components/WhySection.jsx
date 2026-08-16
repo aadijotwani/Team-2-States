@@ -22,9 +22,9 @@ export default function WhySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-[clamp(28px,4.5vw,44px)] font-extrabold text-center mb-10 text-white"
+          className="text-[clamp(28px,4.5vw,44px)] font-extrabold text-center mb-16 text-white"
         >
-          Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-[#ffaa00]">Wildfire?</span>
+          Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-[#ffaa00]">Firewall?</span>
         </motion.h2>
 
         <motion.div 

@@ -43,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-gray-200 text-base md:text-lg mb-12 leading-relaxed max-w-[600px] drop-shadow-lg font-medium"
         >
-          Wildfire provides a comprehensive suite of tools for proactive wildfire management. 
+          Firewall provides a comprehensive suite of tools for proactive wildfire management. 
           By harnessing real-time satellite imagery and advanced AI, our platform helps predict outbreaks, 
           assess threats, and deploy effective preventive action.
         </motion.p>

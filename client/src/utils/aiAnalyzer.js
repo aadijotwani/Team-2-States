@@ -45,7 +45,7 @@ Include the following sections:
 Keep it professional, highly readable, and formatted beautifully with bullet points and bold text where appropriate.`;
 
     const interaction = await ai.interactions.create({
-        model: 'gemini-3.7-flash',
+        model: 'gemini-3.5-flash-lite',
         input: prompt,
     });
     

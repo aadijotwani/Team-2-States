@@ -1,16 +1,66 @@
-# React + Vite
+# 🔥 Firewall: Predictive Wildfire Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Firewall** is a comprehensive, AI-driven platform designed to predict, assess, and manage wildfire outbreaks proactively. Built by **Team 2 States**.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Real-Time Interactive Map:** Built with Leaflet, allowing users to explore different regions and drop pins to select specific coordinates.
+- **AI-Powered Risk Analysis:** Integrates Google's cutting-edge Gemini AI (`gemini-3.7-flash` via the new Interactions SDK) to instantly analyze local environmental conditions and generate comprehensive risk assessments.
+- **Live Environmental Data:** Fetches live weather, temperature, wind speed, and humidity data to feed into the prediction models.
+- **Premium UI/UX:** A stunning, cinematic single-page application built with React, Vite, Tailwind CSS, and Framer Motion for buttery-smooth animations and glassmorphic designs.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS, Framer Motion
+- **Maps & Data:** Leaflet, OpenWeather (or similar environmental APIs)
+- **Icons:** Lucide React
+- **AI Integration:** `@google/genai` (Google AI Studio)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these instructions to run the project locally.
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- A completely free [Google Gemini API Key](https://aistudio.google.com/app/apikey).
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aadijotwani/Team-2-States.git
+   cd Team-2-States/client
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Setup your Environment Variables:
+   Create a `.env` file in the root of the `client` directory and add your free Gemini API key:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to the localhost URL provided in your terminal (usually `http://localhost:5173`).
+
+## 🧠 How it Works
+
+1. **Location Selection:** Users drop a pin on the interactive global map.
+2. **Data Aggregation:** The app parses the exact geographic coordinates and pulls real-time environmental data (Temperature, Wind Speed, Humidity).
+3. **AI Inference:** The data is passed securely to Gemini, which acts as an expert Wildfire Risk Analyst. 
+4. **Actionable Insights:** A highly detailed markdown report is generated in real-time, outlining the exact Risk Level, Environmental Analysis, Probability Score, and Actionable Recommendations for local authorities and residents.
+
+---
+
+<p align="center">
+  <i>Built with ❤️ by Team 2 States</i>
+</p>
